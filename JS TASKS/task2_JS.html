@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TASK 2</title>
+  </head>
+
+  <body>
+    <label for="in">ENTER A NUMBER TO REVERSE : </label>
+    <input type="text" id="in" />
+    <button onclick="clk()">SUBMIT</button>
+    <br />
+    <p>REVERSED NUMBER : <span id="ans"></span></p>
+
+    <script>
+        function clk(){
+            var a = document.getElementById("in").value;
+
+            let charArray = a.split('');
+            charArray.sort();
+            let sortedString = charArray.join('');
+
+            var g = document.getElementById("ans");
+            g.textContent = sortedString;
+        }   
+        
+
+    </script>
+  </body>
+</html>

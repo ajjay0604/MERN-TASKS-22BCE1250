@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TASK 4</title>
+  </head>
+
+  <body>
+    <button onclick="func1()">SHOW DATE</button>
+    <BR>
+    <p id="date"></p>
+    <BR>
+    <button onclick="func2()">SHOW TIME</button>
+    <BR>
+    <p id="time"></p>
+    <BR>
+
+    <script>
+
+        function func1(){
+            var dat = new Date();
+            var day = dat.getDate();
+            var month = dat.getMonth() + 1;
+            var year = dat.getFullYear();
+
+            if (day < 10) {
+                day = '0' + day;
+            }
+            if (month < 10) {
+                month = '0' + month;
+            }
+
+            var formattedDate = day + ' / ' + month + ' / ' + year;
+
+            var b = document.getElementById("date");
+            b.textContent = formattedDate;
+        }
+
+        function func2(){
+            var dat = new Date();
+            var t1 = dat.getHours();
+            var t2 = dat.getMinutes();
+            var t3 = dat.getSeconds();
+
+            var t = String(t1) + " : " + String(t2) + " : " + String(t3);
+            var b = document.getElementById("time");
+            b.textContent = t;
+        }
+
+    </script>
+  </body>
+</html>

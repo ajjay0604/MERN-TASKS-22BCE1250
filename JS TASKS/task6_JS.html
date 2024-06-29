@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK 6</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="icon" href="./login.png">
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-gray-100">
+    <div class="w-full md:max-w-md lg:max-w-lg border-2 h-auto content-center rounded-3xl p-6 shadow-2xl bg-white mt-5" id="one">
+        <div class="flex justify-center">
+            <img src="./image.png" class="w-2/6 mt-2">
+        </div>
+
+        <br>
+        <label class="ml-1 block text-left mb-2">Username</label>
+        <div class="relative mb-4">
+            <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                <i class="fa-solid fa-user"></i>
+            </span>
+            <input type="email" id="loginEmail" class="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your Username or Email ID">
+            <div id="emailError" class="text-red-500 text-sm mt-1"></div>
+        </div>
+        <div class="mt-6">
+            <label class="ml-1 block text-left mb-2">Password</label>
+            <div class="relative mb-4">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                    <i class="fa-solid fa-lock"></i>
+                </span>
+                <input type="password" id="loginPassword" class="w-full py-2 pl-10 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="**********">
+                <span class="absolute inset-y-0 right-0 flex items-center pr-3">
+                    <i id="togglePassword" class="fa-regular fa-eye cursor-pointer"></i>
+                </span>
+                <div id="passwordError" class="text-red-500 text-sm mt-1"></div>
+            </div>
+        </div>
+
+        <div class="flex items-center justify-between mb-4 mt-6">
+            <div class="flex items-center">
+                <input id="rememberMe" type="checkbox" class="form-checkbox h-5 w-5 text-blue-400 mt-1">
+                <label for="rememberMe" class="ml-2 block text-gray-900 text-blue-400 mt-1">Remember Me</label>
+            </div>
+            <a href="#" class="text-blue-400">Forgot Password?</a>
+        </div>
+
+        <div class="flex justify-center mt-6">
+            <button id="loginButton" class="bg-blue-400 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 w-5/6 mt-2">LOG IN</button>
+        </div>
+        <br>
+        <div class="text-center kk mt-2 mb-3">
+            <span>Don't have an account?</span> &nbsp;&nbsp;
+            <a href="#" class="text-blue-400">Sign Up</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('togglePassword').addEventListener('click', function () {
+            const passwordField = document.getElementById('loginPassword');
+            const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordField.setAttribute('type', type);
+
+            this.classList.toggle('fa-eye');
+            this.classList.toggle('fa-eye-slash');
+        });
+
+        document.getElementById('loginButton').addEventListener('click', function (event) {
+            event.preventDefault();
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            const emailError = document.getElementById('emailError');
+            const passwordError = document.getElementById('passwordError');
+            let valid = true;
+
+            emailError.textContent = '';
+            passwordError.textContent = '';
+
+            if (!validateEmail(email)) {
+                emailError.textContent = "Please enter a valid email.";
+                valid = false;
+            }
+
+            if (password === "") {
+                passwordError.textContent = "Please enter your password.";
+                valid = false;
+            }
+
+            if (valid) {
+                // Here you can add the code to handle successful login
+            }
+        });
+
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(String(email).toLowerCase());
+        }
+    </script>
+</body>
+
+</html>

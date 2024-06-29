@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK 4 CSS</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .side {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100%;
+            padding-top: 20px;
+        }
+        .side a {
+            transition: margin-left 0.6s;
+            padding: 20px;
+            margin-left: -105px;
+            width: 100px;
+            text-decoration: none;
+            font-size: 16px;
+            color: white;
+            border-radius: 4px;
+        }
+
+        .side a:hover {
+            margin-left: 0;
+        }
+        #Home {
+            background-color: #4dc551;
+        }
+        #About {
+            background-color: #219398;
+        }
+        #Experience {
+            background-color: #ff1100;
+        }
+        #contact {
+            background-color: #967e7e;
+        }
+    </style>
+</head>
+<body>  
+    <h1 style="color: black; text-align: center">TASK 4 - CSS</h1>
+
+    <div class="side"> <br> <br> <br> <br>
+        <a href="" id="Home">Home</a><br>
+        <a href="" id="About">About</a><br>
+        <a href="" id="Experience">Experience</a><br>
+        <a href="" id="contact">Contact</a><br>
+    </div>
+</body>
+</html>

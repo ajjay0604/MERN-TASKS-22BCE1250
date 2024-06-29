@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TASK 3</title>
+    </head>
+    <body>
+        <label for="in1">NUMBER 1 : </label>
+        <input type="number" id="in1" />
+        <BR><BR>
+        <label for="in2">NUMBER 2 : </label>
+        <input type="number" id="in2" />
+        <br /><br /><br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="func1()">MULTIPLY</button> &nbsp;<button onclick="func2()">DIVIDE</button>
+        <br><br>
+        <h3>ANSWER : <span id="ans"></span></h3>
+
+        <script>
+
+            function func1(){
+                var a = document.getElementById("in1").value;
+                var b = document.getElementById("in2").value;
+                var c = a*b;
+                var d = document.getElementById("ans");
+                d.textContent = c;
+            }
+
+            function func2(){
+                var a = document.getElementById("in1").value;
+                var b = document.getElementById("in2").value;
+                var c = a/b;
+                var d = document.getElementById("ans");
+                d.textContent = c;
+            }
+
+        </script>
+    </body>
+</html>

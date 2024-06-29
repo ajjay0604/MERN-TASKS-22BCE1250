@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK 7 CSS</title>
+
+    <style>
+
+        body{
+            color: white;
+        }
+        tr{
+            width: 100px;
+            padding: 5px;
+            
+        }
+
+        td{
+            width: 300px;
+            padding: 5px;
+        }
+
+        .one{
+            padding-top: 50px;
+            padding-bottom: 50px;
+            width: 900px;
+            background-color: rgb(141, 21, 129);
+        }
+
+        .two{
+            
+            width: 700px;
+            background-color: rgb(255, 0, 255);
+            padding: 30PX;
+        }
+
+        .button{
+            width: 500px;
+            padding: 12px;
+            background-color: rgb(52, 171, 56);
+            border-radius: 20px;
+            font-size: 15px;
+            transition: background-color 0.6s;
+        }
+
+        .button:hover{
+            cursor: pointer;
+            background-color: rgb(124, 203, 41);
+        }
+    </style>
+</head>
+<body>
+    <H1 style="text-align: center; color: black;">TASK 7 - CSS</H1>
+    <br><br>
+    <center>
+        <div class="one">
+            <center>
+                <div class="two">
+                    <form>
+                        <table>
+                            <tr>
+                                <td>
+                                    <label for="name">
+                                        Full Name
+                                    </label>
+                                </td>
+                
+                                <td>
+                                    <input type="text" id="name" placeholder="Your Name">
+                                </td>
+                            </tr>
+                
+                            <tr>
+                                <td>
+                                    <label for="mail">
+                                        Email
+                                    </label>
+                                </td>
+                
+                                <td>
+                                    <input type="email" id="mail"  placeholder="Your Email">
+                                </td>
+                            </tr>
+                
+                            <tr>
+                                <td>
+                                    <label for="pss">
+                                        Password
+                                    </label>
+                                </td>
+                
+                                <td>
+                                    <input type="password" id="pss">
+                                </td>
+                            </tr>
+                
+                            <tr>
+                                <td>
+                                    <label for="ph">
+                                        Phone Number
+                                    </label>
+                                </td>
+                
+                                <td>
+                                    <input type="text" id="ph">
+                                </td>
+                            </tr>
+                
+                            <tr>
+                                <td class="hh">
+                                    <label for="gen">
+                                        Gender
+                                    </label>
+                                </td>
+                
+                                <td>
+                                    <input type="radio" id="male" name="gen" value="Male">
+                                    <label for="male">Male</label>
+                                    <input type="radio" id="female" name="gen" value="Female">
+                                    <label for="female">Female</label>
+                                    <input type="radio" id="oth" name="gen" value="Others">
+                                    <label for="oth">Others</label>
+                                </td>
+                            </tr>
+                
+                            <tr>
+                                <td>
+                                    <label for="l">
+                                        Language
+                                    </label>
+                                </td>
+                
+                                <td>
+                                    <select id="l">
+                                        <option value="Male">Select Language</option>
+                                    </select>
+                                </td>
+                            </tr>
+                
+                            <tr>
+                                <td>
+                                    <label for="z">
+                                        Zipcode
+                                    </label>
+                                </td>
+                
+                                <td>
+                                    <input type="number" id="z">
+                                </td>
+                            </tr>
+                
+                            <tr>
+                                <td>
+                                    <label for="add">
+                                        About
+                                    </label>
+                                </td>
+                
+                                <td>
+                                    <textarea name="txt" id="add" rows="6" cols="30" placeholder="Write About Yourself"></textarea>
+                                </td>
+                            </tr>
+                
+                            
+                        </table>
+                    </form>
+                    <br>
+                    <center><button type="submit" class="button">Register</button></center>
+                </div>
+                
+            </center>
+            
+        </div>
+    </center>
+    
+    
+
+</body>
+</html>

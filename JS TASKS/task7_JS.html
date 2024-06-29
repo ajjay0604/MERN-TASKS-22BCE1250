@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 7</title>
+    <link href='https://fonts.googleapis.com/css2?family=Pacifico&display=swap' rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            color: blue;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        .train {
+            position: relative;
+            display: block;
+            margin: 20px auto;
+        }
+        .animate {
+            animation: moveTrain 5s infinite;
+        }
+        @keyframes moveTrain { 
+            from { left: 0; }
+            to { left: 100%; }
+        }
+        .btn {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn-start {
+            background-color: blue;
+            color: white;
+        }
+        .btn-stop {
+            background-color: red;
+            color: white;
+        }
+    </style>
+
+    <script>
+        function toggleAnimation(action) {
+            const train = document.getElementById('train');
+            if (action === 'start') {
+                train.classList.add('animate');
+            } else {
+                train.classList.remove('animate');
+            }
+        }
+    </script>
+    
+</head>
+<body>
+    <div class="container">
+        <img id="train" src="https://www.javatpoint.com/oprweb/train1.png" alt="train" class="train">
+        <h3 style="font-weight: bold;">Click the buttons to handle animation</h3>
+        <button class="btn btn-start" onclick="toggleAnimation('start')">Start</button>
+        <button class="btn btn-stop" onclick="toggleAnimation('stop')">Stop</button>
+    </div>
+</body>
+</html>

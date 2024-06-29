@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TASK 5</title>
+
+    <style>
+        td{
+            padding: 10px;
+        }
+
+        button{
+            margin-left: 130px;
+        }
+    </style>
+  </head>
+
+  <body>
+    <form>
+        <table>
+            <tr>
+                <td>
+                    <label for="name">
+                        Full Name
+                    </label>
+                </td>
+
+                <td>
+                    <input type="text" id="name">
+                </td>
+
+                <td>
+                    <p id="nam" style="color: red; margin-left: 30px;"></p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="mail">
+                        Email
+                    </label>
+                </td>
+
+                <td>
+                    <input type="email" id="mail">
+                </td>
+
+                <td>
+                    <p id="mai" style="color: red; margin-left: 30px;"></p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="web">
+                        Website
+                    </label>
+                </td>
+
+                <td>
+                    <input type="url" id="web">
+                </td>
+
+                <td>
+                    <p id="url" style="color: red; margin-left: 30px;"></p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="add">
+                        About
+                    </label>
+                </td>
+
+                <td>
+                    <textarea name="txt" id="add" rows="6" cols="30" placeholder="Message"></textarea>
+                </td>
+
+                <td>
+                    <p id="abt" style="color: red; margin-left: 30px;"></p>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+
+    <br>
+    <button onclick="func1()">SUBMIT</button>
+    <br><br><br>
+    <p>CLICK SUBMIT TO CHECK JS WORKING</p>
+
+    <script>
+        function func1(){
+            var a = document.getElementById("name").value;
+            var b = document.getElementById("mail").value;
+            var c = document.getElementById("web").value;
+            var d = document.getElementById("add").value;
+
+            var aa = document.getElementById("nam");
+            var bb = document.getElementById("mai");
+            var cc = document.getElementById("url");
+            var dd = document.getElementById("abt");
+
+            if( a === '' ){
+                aa.textContent = "This field is required"
+            }
+
+            if( b === '' ){
+                bb.textContent = "A valid email address is required"
+            }
+
+            if( c === '' ){
+                cc.textContent = "A valid url is required"
+            }
+
+            if( d === '' ){
+                dd.textContent = "This field is required"
+            }
+        }
+        
+
+    </script>
+  </body>
+</html>
